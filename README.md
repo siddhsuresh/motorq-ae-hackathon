@@ -1,23 +1,11 @@
-## Getting Started
-
-Run your app in the development mode.
-
+# Motorq AE Hackathon 18th August
+## By Siddharth Suresh 20BPS1042
+## The Wbsite is built using Next.js and Blitz.js 2.0 Toolkit and is styled by tailwindcss and mantine.dev
+## Steps to Run the website
 ```
-yarn dev
+yarn (or npm i)
+
+yarn dev (or npm run dev)
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Environment Variables
-
-Ensure the `.env.local` file has required environment variables:
-
-```
-DATABASE_URL=postgresql://<YOUR_DB_USERNAME>@localhost:5432/motorq-ae-hackathon
-```
-
-Ensure the `.env.test.local` file has required environment variables:
-
-```
-DATABASE_URL=postgresql://<YOUR_DB_USERNAME>@localhost:5432/motorq-ae-hackathon_test
-```
+## Video Demo
+[Demo of webiste](https://motorq-ae-hackathon-siddhsuresh.vercel.app/target.webm)
