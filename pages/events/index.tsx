@@ -8,6 +8,7 @@ import Layout from "app/core/layouts/Layout"
 import getEvents from "app/events/queries/getEvents"
 import Content from "app/core/components/content"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
+import Search from "app/events/components/Search"
 
 const ITEMS_PER_PAGE = 100
 
@@ -47,10 +48,12 @@ export const EventsList = () => {
           </Link>
         </p>
       )}
+      <div className="p-10 w-1/4">
+        <Search />
+      </div>
 
       <Content title="Events" events={events} count={count} />
     </>
-
   )
 }
 
