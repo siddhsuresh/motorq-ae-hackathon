@@ -25,7 +25,7 @@ export default resolver.pipe(
       const event = await db.event.findFirst({ where: { id: eventId } })
 
       //check already registered events of the user
-      const registeredEvents = await getUserEvents({},ctx)
+      const registeredEvents = await getUserEvents({userId: user.id},ctx)
       console.log(registeredEvents)
 
       //check if the user had any overlapping events that is the range of the start and end date of the new event

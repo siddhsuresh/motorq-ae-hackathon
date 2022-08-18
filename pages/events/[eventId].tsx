@@ -116,7 +116,11 @@ export const Event = ({ event, user }) => {
               className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={() => {
-                createTokenMutation({ eventId: event.id, email: user.email })
+                createTokenMutation({ eventId: event.id, email: user.email }).catch(
+                  (err) => {
+                    alert(err.message)
+                  }
+                )
               }}
               style={{ marginLeft: "0.5rem" }}
             >
