@@ -63,9 +63,14 @@ const Content = ({ title, events, count }) => {
                       <button
                         type="button"
                         className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-                        onClick={() => {
-                          DeleteRegistration({
+                        onClick={async() => {
+                          await DeleteRegistration({
                             id: event.id,
+                          }).then(()=>{
+                            showNotification({
+                              title: "Success",
+                              message: "You have successfully unregistered for this event",
+                            })
                           })
                           router.push("/events")
                         }}

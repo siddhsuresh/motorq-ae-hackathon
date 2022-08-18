@@ -910,7 +910,7 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
   integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
@@ -1495,6 +1495,14 @@
     "@mantine/ssr" "5.1.6"
     "@mantine/styles" "5.1.6"
 
+"@mantine/notifications@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/notifications/-/notifications-5.1.6.tgz#6311c928e821fdee6963048a698fce465482a589"
+  integrity sha512-JT0nLOoNO/NDuB2Xn4kVOSo+4Y4F+ogrWLN7qHgpmZlRsxc/8S1DFwgubTMwvJR38AHrOVaqp1hFsqdHDww0Ow==
+  dependencies:
+    "@mantine/utils" "5.1.6"
+    react-transition-group "4.4.2"
+
 "@mantine/ssr@5.1.6":
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-5.1.6.tgz#573e45b199357c57be837b6edc394500268d188a"
@@ -1745,7 +1753,7 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
-"@react-leaflet/core@^1.0.2", "@react-leaflet/core@^1.1.1":
+"@react-leaflet/core@^1.0.2":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@react-leaflet/core/-/core-1.1.1.tgz#827fd05bb542cf874116176d8ef48d5b12163f81"
   integrity sha512-7PGLWa9MZ5x/cWy8EH2VzI4T8q5WpuHbixzCDXqixP/WyqwIrg5NDUPgYuFnB4IEIZF+6nA265mYzswFo/h1Pw==
@@ -3662,6 +3670,14 @@ dom-accessibility-api@^0.5.6:
   version "0.5.14"
   resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.5.14.tgz#56082f71b1dc7aac69d83c4285eef39c15d93f56"
   integrity sha512-NMt+m9zFMPZe0JcY9gN224Qvk6qLIdqex29clBvc/y75ZBX9YA9wNK3frsYvu2DI1xcCIwxwnX+TlsJ2DSOADg==
+
+dom-helpers@^5.0.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^3.0.2"
 
 dom-serializer@^1.0.1:
   version "1.4.1"
@@ -6109,30 +6125,10 @@ language-tags@^1.0.5:
   dependencies:
     language-subtag-registry "~0.3.2"
 
-leaflet-defaulticon-compatibility@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/leaflet-defaulticon-compatibility/-/leaflet-defaulticon-compatibility-0.1.1.tgz#ab72257b3da66fb48dab69a10c3824012a15a20a"
-  integrity sha512-vDBFdlUAwjSEGep9ih8kfJilf6yN8V9zTbF5NC/1ZwLeGko3RUQepspPnGCRMFV51dY3Lb3hziboicrFz+rxQA==
-
-leaflet.markercluster@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/leaflet.markercluster/-/leaflet.markercluster-1.4.1.tgz#b53f2c4f2ca7306ddab1dbb6f1861d5e8aa6c5e5"
-  integrity sha512-ZSEpE/EFApR0bJ1w/dUGwTSUvWlpalKqIzkaYdYB7jaftQA/Y2Jav+eT4CMtEYFj+ZK4mswP13Q2acnPBnhGOw==
-
-leaflet.markercluster@^1.4.1:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/leaflet.markercluster/-/leaflet.markercluster-1.5.3.tgz#9cdb52a4eab92671832e1ef9899669e80efc4056"
-  integrity sha512-vPTw/Bndq7eQHjLBVlWpnGeLa3t+3zGiuM7fJwCkiMFq+nmRuG3RI3f7f4N4TDX7T4NpbAXpR2+NTRSEGfCSeA==
-
 leaflet@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.7.1.tgz#10d684916edfe1bf41d688a3b97127c0322a2a19"
   integrity sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw==
-
-leaflet@^1.6.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.8.0.tgz#4615db4a22a304e8e692cae9270b983b38a2055e"
-  integrity sha512-gwhMjFCQiYs3x/Sf+d49f10ERXaEFCPr+nVTryhAW8DWbMGqJqt9G4XuIaHmFW08zYvhgdzqXGr8AlW8v8dQkA==
 
 leven@^3.1.0:
   version "3.1.0"
@@ -7377,7 +7373,7 @@ prompts@2.4.2, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7568,29 +7564,12 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
-react-leaflet-markercluster@3.0.0-rc1:
-  version "3.0.0-rc1"
-  resolved "https://registry.yarnpkg.com/react-leaflet-markercluster/-/react-leaflet-markercluster-3.0.0-rc1.tgz#4e45392d599fb410eac413aeee6cb52f51d0fc5c"
-  integrity sha512-wr8ERtx73sY0uVoQAM1v1vsA5Vsbdgyqc88h+Eo2kYRwNdkVTEOoUTnAh3CgGuOyP0Y9QLd2dKGupGkufpwryQ==
-  dependencies:
-    "@react-leaflet/core" "^1.0.2"
-    leaflet "^1.6.0"
-    leaflet.markercluster "^1.4.1"
-    react-leaflet "^3.0.0"
-
 react-leaflet@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-leaflet/-/react-leaflet-3.0.2.tgz#4133a0550efe7e24be272b9e24e72fa98b51b751"
   integrity sha512-7JxMV9HOo94jFwn1z+gcHVcYWeMxD994YsLxX3yyWebGOsLxpYfiQgNI7RPZWcAtcBK8XYSRB6WUj8NNb9hgbw==
   dependencies:
     "@react-leaflet/core" "^1.0.2"
-
-react-leaflet@^3.0.0:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/react-leaflet/-/react-leaflet-3.2.5.tgz#bec0bfab9dd8c2b030ea630f7a0687a60322ca7d"
-  integrity sha512-Z3KZ+4SijsRbbrt2I1a3ZDY6+V6Pm91eYTdxTN18G6IOkFRsJo1BuSPLFnyFrlF3WDjQFPEcTPkEgD1VEeAoBg==
-  dependencies:
-    "@react-leaflet/core" "^1.1.1"
 
 react-property@2.0.0:
   version "2.0.0"
@@ -7605,6 +7584,16 @@ react-textarea-autosize@8.3.4:
     "@babel/runtime" "^7.10.2"
     use-composed-ref "^1.3.0"
     use-latest "^1.2.1"
+
+react-transition-group@4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
+  integrity sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
 
 react@18.0.0:
   version "18.0.0"

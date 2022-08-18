@@ -3,13 +3,14 @@ import { Suspense } from "react"
 import { Routes } from "@blitzjs/next"
 import Head from "next/head"
 import Link from "next/link"
-import { useQuery, useMutation, invokeWithCtx } from "@blitzjs/rpc"
+import { useMutation, invokeWithCtx } from "@blitzjs/rpc"
 
 import Layout from "app/core/layouts/Layout"
 import getEventToken from "app/event-tokens/queries/getEventToken"
 import { gSSP } from "app/blitz-server"
 import getCurrentUser from "app/users/queries/getCurrentUser"
 import approveParticipant from "app/event-tokens/mutations/approveParticipant"
+import { showNotification } from '@mantine/notifications';
 
 export const getServerSideProps = gSSP(async ({ ctx, params }) => {
   const eventToken = await invokeWithCtx(getEventToken, { id: params.eventTokenId }, ctx)
@@ -49,10 +50,18 @@ export const EventToken = ({ eventToken }) => {
           onClick={async () => {
             try {
               await ApproveParticipant({ token: eventToken.hashedToken })
+              showNotification({
+                title: "Approved",
+                message: "You have approved the request",
+              })
             } catch (e) {
-              alert(e)
+              showNotification({
+                title: "Error",
+                message: e.message,
+              })
             }
-          }}
+          }
+          }
         >
           Approve
         </button>

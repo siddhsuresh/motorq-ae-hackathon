@@ -13,19 +13,18 @@ generator client {
 // --------------------------------------
 
 model User {
-  id             String   @id @default(auto()) @map("_id") @db.ObjectId
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  name           String?
-  email          String   @unique
-  hashedPassword String?
-  role           String   @default("USER")
-
-  tokens     Token[]
-  sessions   Session[]
-  EventToken EventToken[]
-  events     Event[]     @relation(fields: [eventIDs], references: [id])
-  eventIDs   String[]    @db.ObjectId
+  id                   String       @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt            DateTime     @default(now())
+  updatedAt            DateTime     @updatedAt
+  name                 String?
+  email                String       @unique
+  hashedPassword       String?
+  role                 String       @default("USER")
+  tokens               Token[]
+  sessions             Session[]
+  EventToken           EventToken[]
+  events               Event[]      @relation(fields: [eventIDs], references: [id])
+  eventIDs             String[]     @db.ObjectId
 }
 
 model Session {
@@ -80,8 +79,8 @@ model Event {
   latitude    Float
   size        Int
   seatsLeft   Int?
-  users       User[]     @relation(fields: [userIDs], references: [id])
-  userIDs     String[]    @db.ObjectId
+  users       User[]       @relation(fields: [userIDs], references: [id])
+  userIDs     String[]     @db.ObjectId
   EventToken  EventToken[]
 }
 

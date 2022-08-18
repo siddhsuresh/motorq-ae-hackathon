@@ -15,6 +15,7 @@ import deleteEvent from "app/events/mutations/deleteEvent"
 import createToken from "app/events/mutations/createToken"
 import { getSession } from "@blitzjs/auth"
 import getCurrentUser from "app/users/queries/getCurrentUser"
+import { showNotification } from '@mantine/notifications';
 
 export const getServerSideProps = gSSP(async ({ ctx, params }) => {
   const event = await invokeWithCtx(getEvent, { id: params.eventId }, ctx)
@@ -121,7 +122,10 @@ export const Event = ({ event, user }) => {
                     alert(err.message)
                   }
                 ).then(() => {
-                  alert("Request Sent created. Verify by logging in as an admin")
+                  showNotification({
+                    title: "Token Created",
+                    message: "Token has been created",
+                  })
                 })
               }}
               style={{ marginLeft: "0.5rem" }}

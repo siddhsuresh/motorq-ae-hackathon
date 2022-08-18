@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useMutation } from "@blitzjs/rpc";
 import Layout from "app/core/layouts/Layout";
 import createEvent from "app/events/mutations/createEvent";
+import { showNotification } from '@mantine/notifications';
 import { EventForm, FORM_ERROR } from "app/events/components/EventForm";
 
 const NewEventPage = () => {
@@ -24,6 +25,10 @@ const NewEventPage = () => {
         onSubmit={async (values) => {
           try {
             const event = await createEventMutation(values)
+            showNotification({
+              title: "Event Created",
+              message: "You have successfully created a new event",
+            })
             router.push(Routes.ShowEventPage({ eventId: event.id }));
           } catch (error: any) {
             console.error(error);

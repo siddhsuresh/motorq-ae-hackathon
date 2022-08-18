@@ -6,6 +6,7 @@ import { AuthenticationError, AuthorizationError } from "blitz"
 import { withBlitz } from "app/blitz-client"
 import { MantineProvider } from "@mantine/core"
 import DashboardLayout from "app/dashboard/layout"
+import { NotificationsProvider } from "@mantine/notifications"
 
 function RootErrorFallback({ error }: ErrorFallbackProps) {
   if (error instanceof AuthenticationError) {
@@ -38,9 +39,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           colorScheme: "dark",
         }}
       >
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
+        <NotificationsProvider>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
+        </NotificationsProvider>
       </MantineProvider>
     </ErrorBoundary>
   )

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useQuery, useMutation } from "@blitzjs/rpc";
 import { useParam } from "@blitzjs/next";
+import { showNotification } from '@mantine/notifications';
 
 import Layout from "app/core/layouts/Layout";
 import getEvent from "app/events/queries/getEvent";
@@ -68,6 +69,10 @@ export const EditEvent = ({eventId}) => {
               });
               await setQueryData(updated);
               router.push(Routes.ShowEventPage({ eventId: updated.id }));
+              showNotification({
+                title: "Success",
+                message: "Event updated successfully",
+              });
             } catch (error: any) {
               console.error(error);
               return {

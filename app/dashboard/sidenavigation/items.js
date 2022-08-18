@@ -5,6 +5,7 @@ import data from './data';
 import { useToggle } from '../provider/context';
 import logout from 'app/auth/mutations/logout';
 import { useMutation } from '@blitzjs/rpc';
+import { showNotification } from '@mantine/notifications';
 
 const style = {
   title: `mx-4 text-sm`,
@@ -27,6 +28,10 @@ export default function SidenavItems() {
               onClick={async () => {
                 if (item.title === 'Logout') {
                   await logoutMutation()
+                  showNotification({
+                    title: 'Logout',
+                    message: 'You have been logged out',
+                  })
                 }
               }}
             >
