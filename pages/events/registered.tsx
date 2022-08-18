@@ -41,7 +41,7 @@ const Content = ({ title, events, count }) => {
             <Link href="/events/[id]" as={`/events/${event.id}`} key={event.id} passHref>
               <div className="w-full md:w-4/12 cursor-pointer">
                 <div className="p-2">
-                  <div className="p-4 rounded-3xl" style={{ backgroundColor: "#fee4cb" }}>
+                  <div className="p-4 rounded-3xl" style={{ backgroundColor: "#000" }}>
                     <div className="flex flex-col items-start justify-start gap-5">
                       <span className="text-sm">
                         <span className="font-bold">Event Start:</span>{" "}
