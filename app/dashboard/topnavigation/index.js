@@ -11,7 +11,7 @@ export default function TopNavigation() {
         )}
         {!user && (
           <div className="flex items-center">
-            <a href="/login">Login</a>
+            <a href="/auth/login">Login</a>
           </div>
         )}
       </div>
