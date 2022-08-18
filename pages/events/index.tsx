@@ -36,6 +36,18 @@ export const EventsList = () => {
           </Link>
         </p>
       )}
+      {user && user.role !== "ADMIN" && (
+        <p className="p-10">
+          <Link href={Routes.EventsCurrentUserPage()}>
+            <a>
+              <button className="bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                View Registered Events
+              </button>
+            </a>
+          </Link>
+        </p>
+      )}
+
       <Content title="Events" events={events} count={count} />
     </>
 
