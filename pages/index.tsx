@@ -14,13 +14,7 @@ const Home: BlitzPage = () => {
         </p>
         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a
-<<<<<<< HEAD
-            href="/target.webm"
-=======
-            href="#"
->>>>>>> parent of c6858fe (add video demo)
-            className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-          >
+            href="/target.webm">
             <svg
               className="mr-2 -ml-1 w-5 h-5"
               fill="currentColor"
