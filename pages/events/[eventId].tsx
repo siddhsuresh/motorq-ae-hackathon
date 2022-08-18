@@ -120,7 +120,9 @@ export const Event = ({ event, user }) => {
                   (err) => {
                     alert(err.message)
                   }
-                )
+                ).then(() => {
+                  alert("Request Sent created. Verify by logging in as an admin")
+                })
               }}
               style={{ marginLeft: "0.5rem" }}
             >
