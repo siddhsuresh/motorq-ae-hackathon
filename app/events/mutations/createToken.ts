@@ -29,16 +29,16 @@ export default resolver.pipe(
       console.log(registeredEvents)
 
       //check if the user had any overlapping events that is the range of the start and end date of the new event
-      const overlappingEvents = registeredEvents.events.filter((event) => {
-        return (
-          (event.timeStart <= event.timeStart && event.timeEnd >= event.timeStart) ||
-          (event.timeStart <= event.timeEnd && event.timeEnd >= event.timeEnd)
-        )
-      })
-        console.log(overlappingEvents)
-      if (overlappingEvents.length > 0) {
-        throw new Error("You are already registered for an event during this time.")
-      }
+//       const overlappingEvents = registeredEvents.events.filter((event) => {
+//         return (
+//           (event.timeStart <= event.timeStart && event.timeEnd >= event.timeStart) ||
+//           (event.timeStart <= event.timeEnd && event.timeEnd >= event.timeEnd)
+//         )
+//       })
+//         console.log(overlappingEvents)
+//       if (overlappingEvents.length > 0) {
+//         throw new Error("You are already registered for an event during this time.")
+//       }
 
       // 5. Save this new token in the database.
       await db.eventToken.create({

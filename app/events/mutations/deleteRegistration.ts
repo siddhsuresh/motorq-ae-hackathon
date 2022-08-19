@@ -17,9 +17,13 @@ export default resolver.pipe(
         events: true
     }})
     const newEvents = user.events.filter((event) => event.id !== id)
+    //get all the ids of the events as a JSON array {id: "id"}
+    const newEventsIds = newEvents.map((event) => {
+      return {id: event.id}
+    })
     const result = await db.user.update({ where: { id: userId }, data: { 
         events:{
-            set: newEvents
+            set: newEventsIds
         }
     } })
     // update the event left seats count
