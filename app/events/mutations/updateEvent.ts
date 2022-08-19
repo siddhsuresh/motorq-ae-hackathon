@@ -7,8 +7,8 @@ const UpdateEvent = z.object({
   id: z.string(),
   title: z.string(),
   description: z.string(),
-  timeStart: z.date(),
-  timeEnd: z.date(),
+  timeStart: z.string(),
+  timeEnd: z.string(),
   latitude: z.number(),
   logitude: z.number(),
   size: z.number(),
@@ -17,9 +17,14 @@ const UpdateEvent = z.object({
 export default resolver.pipe(
   resolver.zod(UpdateEvent),
   resolver.authorize("ADMIN"),
-  async ({ id, ...data }) => {
+  async ({ id, timeStart, timeEnd,...data }) => {
+    const timeStart_d = new Date(timeStart)
+    const timeEnd_d = new Date(timeEnd)
     // TODO: in multi-tenant app, you must add validation to ensure correct tenant
-    const event = await db.event.update({ where: { id }, data });
+    const event = await db.event.update({ where: { id }, 
+                                         timeStart: timeStart_d,
+                                         timeEnd: timeEnd_d,
+                                         data });
 
     return event;
   }
